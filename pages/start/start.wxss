@@ -1,0 +1,20 @@
+swiper {
+  width: 100vw;
+  height: 100vh;
+}
+
+swiper-item {
+  width: 100vw;
+  height: 100vh;
+}
+image{
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn{
+  position: absolute;
+  /* top: 0; */
+  bottom: 90rpx;
+  left: calc(50vw - 100rpx);
+}

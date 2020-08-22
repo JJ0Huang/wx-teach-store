@@ -1,0 +1,25 @@
+{
+  "name": "wx-teach-store",
+  "version": "1.0.0",
+  "description": "微信小程序-商城教程",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJ0Huang/wx-teach-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JJ0Huang/wx-teach-store/issues"
+  },
+  "homepage": "https://github.com/JJ0Huang/wx-teach-store#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.2.1",
+    "apifm-wxapi": "^3.7.0",
+    "wxa-plugin-canvas": "^1.1.12",
+    "wxbarcode": "^1.0.2"
+  }
+}
