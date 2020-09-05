@@ -1,1 +1,6 @@
-/* pages/category/category.wxss */
+.content {
+  width: 580rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

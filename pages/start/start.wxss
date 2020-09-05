@@ -14,7 +14,6 @@ image{
 
 .btn{
   position: absolute;
-  /* top: 0; */
   bottom: 90rpx;
   left: calc(50vw - 100rpx);
 }

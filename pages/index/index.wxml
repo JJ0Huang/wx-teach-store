@@ -1,2 +1,18 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<!-- https://dcdn.it120.cc/2019/12/29/daca65ee-4347-4792-a490-ccbac4b3c1d7.png -->
+<swiper class="swiper-top" autoplay circular>
+	<swiper-item wx:for="{{2}}" wx:key="index">
+		<image src="https://dcdn.it120.cc/2019/12/29/daca65ee-4347-4792-a490-ccbac4b3c1d7.png"></image>
+	</swiper-item>
+</swiper>
+
+<swiper class="ad" autoplay circular vertical>
+	<swiper-item class="text-hide" wx:for="{{orderArray}}" wx:key="index">
+		{{item.userName}}购买了{{item.good}}
+	</swiper-item>
+</swiper>
+
+<view>
+	<view wx:for="{{5}}" wx:key="index">
+		<button bindtap="navToSortPage" data-index="{{index}}">{{index}}</button>
+	</view>
+</view>

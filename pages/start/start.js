@@ -1,4 +1,5 @@
 const CONFIG = require('../../config.js')
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
 Page({
   data: {
     banners: [{
@@ -13,19 +14,25 @@ Page({
   },
   // 在页面刚进入的时候执行
   async onLoad() {
-    let version = ''
-    await wx.getStorage({
-      key: 'app_show_pic_version',
-    }).then(res => {
-      console.log(res.dta)
-      version = res.data
-    })
-    // console.log(version)
+    this.openDialog()
+    let version = wx.getStorageSync('app_show_pic_version')
     if (version == CONFIG.version) {
       wx.switchTab({
         url: '../index/index',
       })
     }
+  },
+  openDialog() {
+    Dialog.confirm({
+        // title: '标题',
+        message: '请允许小程序获取您的权限',
+      })
+      .then(() => {
+        // on confirm
+      })
+      .catch(() => {
+        // on cancel
+      });
   },
   // 进入页面，进入的时候设置版本号，如果有版本号，执行
   goToIndex() {
@@ -38,7 +45,6 @@ Page({
     })
   },
   swiperchange(e) {
-    // console.log(e.detail.current)
     this.setData({
       currentSwiper: e.detail.current
     })

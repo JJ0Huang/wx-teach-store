@@ -2,7 +2,7 @@
 	<view class="page__bd">
 		<swiper bindchange="swiperchange" class="swiper_box" bindchange="swiperchange" indicator-dots="true" indicator-active-color="#fff">
 			<swiper-item wx:for="{{banners}}" wx:key="id">
-				<image mode="aspectFill" bindtap="imgClick" src="{{item.picUrl}}" />
+				<image mode="aspectFill" src="{{item.picUrl}}" />
 			</swiper-item>
 		</swiper>
 		<view class="btn" wx:if="{{currentSwiper+1==maxSwiperNum}}">
@@ -10,3 +10,5 @@
 		</view>
 	</view>
 </view>
+
+<van-dialog id="van-dialog" />

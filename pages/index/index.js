@@ -1,66 +1,30 @@
-// pages/index/index.js
 Page({
+  // try {
+  //   wx.setStorageSync('key', 'value')
+  // } catch (e) { }
 
-  /**
-   * 页面的初始数据
-   */
+  onLoad() {},
   data: {
-
+    orderArray: [{
+        userName: 'boom',
+        good: '笔记本电脑'
+      },
+      {
+        userName: 'ck',
+        good: '护手霜'
+      },
+      {
+        userName: '客户N',
+        good: '技嘉 B365 小雕主板'
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  navToSortPage(e) {
+    let index = e.currentTarget.dataset.index
+    console.log(index)
+    wx.setStorageSync('sortIndex', index)
+    wx.switchTab({
+      url: '../category/category',
+    })
   }
 })

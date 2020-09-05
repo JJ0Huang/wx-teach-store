@@ -1,1 +1,34 @@
-/* pages/index/index.wxss */
+.text-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.swiper-top,
+.swiper-top swiper-item {
+  width: 100%;
+  height: 374rpx;
+}
+
+.swiper-top swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.ad {
+  box-sizing: border-box;
+  width: 600rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 1.2rem;
+  padding: 0 150rpx;
+  border-radius: .6rem;
+  position: absolute;
+  top: 100rpx;
+  margin: 0 75rpx;
+}
+
+.ad swiper-item {
+  text-align: center;
+  font-size: .8rem;
+}

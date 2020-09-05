@@ -1,2 +1,13 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view id="category">
+	<van-sidebar active-key="{{ activeKey }}" bind:change="onBarChange">
+		<van-sidebar-item title="服饰" />
+		<van-sidebar-item title="家电" />
+		<van-sidebar-item title="办公" />
+	</van-sidebar>
+
+	<view class="content">
+		<view wx:if="{{activeKey==0}}">0</view>
+		<view wx:if="{{activeKey==1}}">1</view>
+		<view wx:if="{{activeKey==2}}">2</view>
+	</view>
+</view>

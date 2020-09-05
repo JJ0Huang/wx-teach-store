@@ -1,0 +1,7 @@
+<view class="header">
+	<van-button wx:if="{{!user}}" open-type="getUserInfo" bindgetuserinfo="onUserInfo">登录</van-button>
+	<view wx:else>
+		<van-image round fit="cover" width="100" height="100" src="{{user.avatarUrl}}"></van-image>
+		<view>{{user.nickName}}</view>
+	</view>
+</view>
